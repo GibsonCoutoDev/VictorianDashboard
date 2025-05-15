@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   IconCamera,
   IconChartBar,
@@ -17,12 +17,12 @@ import {
   IconSearch,
   IconSettings,
   IconUsers,
-} from "@tabler/icons-react"
+} from "@tabler/icons-react";
 
-import { NavDocuments } from "@/components/nav-documents"
-import { NavMain } from "@/components/nav-main"
-import { NavSecondary } from "@/components/nav-secondary"
-import { NavUser } from "@/components/nav-user"
+import { NavDocuments } from "@/components/nav-documents";
+import { NavMain } from "@/components/nav-main";
+import { NavSecondary } from "@/components/nav-secondary";
+import { NavUser } from "@/components/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -31,7 +31,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
 
 const data = {
   user: {
@@ -41,27 +41,27 @@ const data = {
   },
   navMain: [
     {
-      title: "Dashboard",
+      title: "Painel",
       url: "#",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
-      icon: IconListDetails,
-    },
-    {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
-    },
-    {
-      title: "Projects",
+      title: "Disciplinas",
       url: "#",
       icon: IconFolder,
     },
     {
-      title: "Team",
+      title: "Planejamento",
+      url: "#",
+      icon: IconListDetails,
+    },
+    {
+      title: "Análise",
+      url: "#",
+      icon: IconChartBar,
+    },
+    {
+      title: "Histórico",
       url: "#",
       icon: IconUsers,
     },
@@ -89,26 +89,26 @@ const data = {
       url: "#",
       items: [
         {
-          title: "Active Proposals",
+          title: "Propostas Ativas",
           url: "#",
         },
         {
-          title: "Archived",
+          title: "Arquivados",
           url: "#",
         },
       ],
     },
     {
-      title: "Prompts",
+      title: "Avisos",
       icon: IconFileAi,
       url: "#",
       items: [
         {
-          title: "Active Proposals",
+          title: "Propostas Ativas",
           url: "#",
         },
         {
-          title: "Archived",
+          title: "Arquivados",
           url: "#",
         },
       ],
@@ -116,39 +116,39 @@ const data = {
   ],
   navSecondary: [
     {
-      title: "Settings",
+      title: "Configurações",
       url: "#",
       icon: IconSettings,
     },
     {
-      title: "Get Help",
+      title: "Ajuda",
       url: "#",
       icon: IconHelp,
     },
     {
-      title: "Search",
+      title: "Pesquisar",
       url: "#",
       icon: IconSearch,
     },
   ],
   documents: [
     {
-      name: "Data Library",
+      name: "Biblioteca de dados",
       url: "#",
       icon: IconDatabase,
     },
     {
-      name: "Reports",
+      name: "Reportar",
       url: "#",
       icon: IconReport,
     },
     {
-      name: "Word Assistant",
+      name: "Assistente IA",
       url: "#",
       icon: IconFileWord,
     },
   ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -162,7 +162,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <a href="#">
                 <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <span className="text-base font-semibold">
+                  Victorian Dasboard
+                </span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -177,5 +179,5 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }
