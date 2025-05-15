@@ -1,10 +1,6 @@
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-<<<<<<< HEAD
-import { ThemeProvider } from "@/components/theme-provider"
-=======
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ActiveThemeProvider } from "@/components/active-theme";
 import { cookies } from "next/headers";
@@ -14,7 +10,6 @@ const META_THEME_COLORS = {
   light: "#ffffff",
   dark: "#09090b",
 };
->>>>>>> 958dd7d (Adição do seletor de temas)
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,10 +36,6 @@ export default async function RootLayout({
   const isScaled = activeThemeValue?.endsWith("-scaled");
 
   return (
-<<<<<<< HEAD
-    <html lang="en">
-      <body>
-=======
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
@@ -53,22 +44,16 @@ export default async function RootLayout({
           isScaled ? "theme-scaled" : "",
         )}
       >
->>>>>>> 958dd7d (Adição do seletor de temas)
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-<<<<<<< HEAD
-        >
-          {children}
-=======
           enableColorScheme
         >
           <ActiveThemeProvider initialTheme={activeThemeValue}>
             {children}
           </ActiveThemeProvider>
->>>>>>> 958dd7d (Adição do seletor de temas)
         </ThemeProvider>
       </body>
     </html>
