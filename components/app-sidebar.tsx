@@ -46,7 +46,7 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Disciplinas",
+      title: "Disciplinas"",
       url: "#",
       icon: IconFolder,
     },
