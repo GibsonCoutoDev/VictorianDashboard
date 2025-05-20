@@ -14,6 +14,7 @@ externalPort = 80
 [[ports]]
 localPort = 3001
 externalPort = 3001
+<<<<<<< HEAD
 
 [workflows]
 runButton = "Run"
@@ -26,3 +27,5 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm run dev"
+=======
+>>>>>>> f2c6599698564d7f59aca3fe11d2f30f871b8089
