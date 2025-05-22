@@ -1,4 +1,4 @@
-import { Disciplina, Prioridade } from "../models/disciplina";
+import { Disciplina, Prioridade } from "../models/Disciplina";
 
 export function registrarEstudo(disciplina: Disciplina, horas: number): void {
   if (horas <= 0) return;
